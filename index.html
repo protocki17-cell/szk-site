@@ -116,8 +116,20 @@
     .d4 { transition-delay: 0.4s; }
 
     /* SECTION LABELS */
-    .label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); display: flex; align-items: center; gap: 10px; }
+    .label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
     .label::before { content: ''; width: 24px; height: 2px; background: var(--red); flex-shrink: 0; }
+
+    /* SECTION HEADINGS — normalize across all sections */
+    .sec-title { font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 40px; }
+
+    /* BODY TEXT — single muted tone */
+    .body-text { font-size: 0.88rem; color: #555; line-height: 1.78; }
+
+    /* CARD BRAND LABEL */
+    .card-brand { font-size: 0.62rem; font-weight: 700; color: var(--red); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px; }
+
+    /* CARD SPEC LINE */
+    .card-spec { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 4px; }
 
     /* INPUT */
     .inp { width: 100%; background: var(--off); border: 1.5px solid var(--light); padding: 11px 14px; color: var(--text); font-size: 0.875rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
@@ -254,7 +266,7 @@
       Samochody,<br/>które definiują<br/><span style="color:var(--red);">styl życia.</span>
     </h1>
 
-    <p class="reveal d2" style="font-size:1rem;color:#444;max-width:480px;line-height:1.8;margin-bottom:44px;">
+    <p class="reveal d2" style="font-size:1rem;color:#555;max-width:480px;line-height:1.8;margin-bottom:44px;">
       Starannie wyselekcjonowane pojazdy klasy premium. Mercedes-Benz, BMW, Porsche — transparentność, pasja i pełna historia każdego auta.
     </p>
 
@@ -307,7 +319,7 @@
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(40,180,80,0.08) 0%,transparent 60%);pointer-events:none;"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Porsche</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Porsche</div>
           <h3 style="font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">Panamera 4S</h3>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:8px;flex-wrap:wrap;gap:4px;">
             <span class="chip chip-r">E-Hybrid</span>
@@ -330,7 +342,7 @@
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 80%,rgba(40,80,200,0.1) 0%,transparent 60%);pointer-events:none;"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">BMW</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">BMW</div>
           <h3 style="font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">Z4 M40i</h3>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:8px;flex-wrap:wrap;gap:4px;">
             <span class="chip">340 KM</span>
@@ -384,10 +396,10 @@
 
 
 <!-- ═══════════════ SEARCH ═══════════════ -->
-<section style="background:var(--off);padding:72px 2rem;" id="oferta">
+<section style="background:var(--off);padding:100px 2rem;" id="oferta">
   <div style="max-width:1360px;margin:0 auto;">
-    <div class="label reveal" style="margin-bottom:14px;">Wyszukiwarka</div>
-    <h2 class="reveal d1" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:32px;">Znajdź <span style="color:var(--red);">idealny pojazd</span></h2>
+    <div class="label reveal">Wyszukiwarka</div>
+    <h2 class="sec-title reveal d1">Znajdź <span style="color:var(--red);">idealny pojazd</span></h2>
 
     <div class="reveal d2" style="background:var(--white);border:1.5px solid var(--light);padding:28px;">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;align-items:end;">
@@ -428,14 +440,14 @@
 
 
 <!-- ═══════════════ INVENTORY ═══════════════ -->
-<section style="padding:80px 2rem 100px;background:var(--white);">
+<section style="padding:100px 2rem;background:var(--white);">
   <div style="max-width:1360px;margin:0 auto;">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:20px;">
       <div>
-        <div class="label reveal" style="margin-bottom:12px;">Wybrane pojazdy</div>
-        <h2 class="reveal d1" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;">Nasza oferta</h2>
+        <div class="label reveal">Wybrane pojazdy</div>
+        <h2 class="sec-title reveal d1" style="margin-bottom:0;">Nasza oferta</h2>
       </div>
-      <a href="#kontakt" class="btn-outline reveal" style="font-size:0.78rem;">Wszystkie (99+) ›</a>
+      <a href="#kontakt" class="btn-outline reveal">Wszystkie (99+) ›</a>
     </div>
 
     <div class="inv-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;">
@@ -457,7 +469,7 @@
         </div>
         <div class="cgrad" style="background:linear-gradient(to top,rgba(8,12,22,0.96) 0%,rgba(8,12,22,0.2) 55%,transparent 100%);"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">BMW</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">BMW</div>
           <h3 style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:-0.03em;margin-bottom:6px;">X7 M60i</h3>
           <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.65;margin-bottom:14px;">2023 · 4.4L V8 · 530 KM · xDrive · 7-osobowy · 12 000 km</p>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;">
@@ -477,9 +489,9 @@
         <div class="cbg" style="background:linear-gradient(145deg,#0f1a10,#162214);"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;">Mercedes-Benz</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Mercedes-Benz</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">E 63 AMG S</h3>
-          <p style="font-size:0.73rem;color:rgba(255,255,255,0.4);margin-top:3px;">2021 · 612 KM · 4MATIC+</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:4px;">2021 · 612 KM · 4MATIC+</p>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;flex-wrap:wrap;gap:4px;">
             <span class="chip">Kombi</span>
             <span style="font-size:1.05rem;font-weight:800;color:#fff;">369 900 PLN</span>
@@ -491,9 +503,9 @@
         <div class="cbg" style="background:linear-gradient(145deg,#1a1008,#221608);"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;">Porsche</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Porsche</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">Cayenne GTS</h3>
-          <p style="font-size:0.73rem;color:rgba(255,255,255,0.4);margin-top:3px;">2023 · 460 KM · PDK</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:4px;">2023 · 460 KM · PDK</p>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;flex-wrap:wrap;gap:4px;">
             <span class="chip">SUV</span>
             <span style="font-size:1.05rem;font-weight:800;color:#fff;">459 000 PLN</span>
@@ -505,9 +517,9 @@
         <div class="cbg" style="background:linear-gradient(145deg,#0a1022,#101830);"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;">BMW</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">BMW</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">M5 Competition</h3>
-          <p style="font-size:0.73rem;color:rgba(255,255,255,0.4);margin-top:3px;">2022 · 625 KM · M xDrive</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:4px;">2022 · 625 KM · M xDrive</p>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;flex-wrap:wrap;gap:4px;">
             <span class="chip chip-r">Limitowany</span>
             <span style="font-size:1.05rem;font-weight:800;color:#fff;">489 900 PLN</span>
@@ -519,9 +531,9 @@
         <div class="cbg" style="background:linear-gradient(145deg,#1a0808,#22080a);"></div>
         <div class="cgrad"></div>
         <div class="cinner">
-          <div style="font-size:0.6rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;">Mercedes-Benz</div>
+          <div style="font-size:0.62rem;font-weight:700;color:var(--red);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Mercedes-Benz</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:#fff;letter-spacing:-0.01em;">GLE 63 AMG S</h3>
-          <p style="font-size:0.73rem;color:rgba(255,255,255,0.4);margin-top:3px;">2022 · 612 KM · Coupe</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:4px;">2022 · 612 KM · Coupe</p>
           <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;flex-wrap:wrap;gap:4px;">
             <span class="chip">SUV Coupe</span>
             <span style="font-size:1.05rem;font-weight:800;color:#fff;">529 000 PLN</span>
@@ -563,10 +575,10 @@
 <!-- ═══════════════ SERVICES ═══════════════ -->
 <section style="padding:100px 2rem;background:var(--white);" id="uslugi">
   <div style="max-width:1360px;margin:0 auto;">
-    <div class="label reveal" style="margin-bottom:14px;">Co oferujemy</div>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:24px;">
-      <h2 class="reveal d1" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;max-width:500px;line-height:1.05;">Kompleksowa obsługa <span style="color:var(--red);">premium</span></h2>
-      <p class="reveal d2" style="font-size:0.88rem;color:#666;max-width:320px;line-height:1.78;">Od wyszukania pojazdu do jego rejestracji — zajmujemy się każdym krokiem.</p>
+    <div class="label reveal">Co oferujemy</div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:24px;">
+      <h2 class="sec-title reveal d1" style="max-width:500px;margin-bottom:0;">Kompleksowa obsługa <span style="color:var(--red);">premium</span></h2>
+      <p class="body-text reveal d2" style="max-width:320px;">Od wyszukania pojazdu do jego rejestracji — zajmujemy się każdym krokiem.</p>
     </div>
 
     <div class="g3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
@@ -576,7 +588,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3 style="font-size:1.1rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:10px;">Pełna historia pojazdu</h3>
-        <p style="font-size:0.83rem;color:#666;line-height:1.78;margin-bottom:20px;">Każdy samochód posiada kompletną dokumentację, historię serwisową ASO, raport CARFAX i certyfikat stanu technicznego.</p>
+        <p style="font-size:0.83rem;color:#555;line-height:1.78;margin-bottom:20px;">Każdy samochód posiada kompletną dokumentację, historię serwisową ASO, raport CARFAX i certyfikat stanu technicznego.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
           <li style="font-size:0.78rem;color:#555;display:flex;align-items:center;gap:8px;"><span style="color:var(--red);font-weight:700;">→</span> Raport CARFAX / AutoISO</li>
           <li style="font-size:0.78rem;color:#555;display:flex;align-items:center;gap:8px;"><span style="color:var(--red);font-weight:700;">→</span> Historia serwisowa ASO</li>
@@ -602,7 +614,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
         </div>
         <h3 style="font-size:1.1rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:10px;">Finansowanie i leasing</h3>
-        <p style="font-size:0.83rem;color:#666;line-height:1.78;margin-bottom:20px;">Współpracujemy z wiodącymi bankami i towarzystwami leasingowymi, oferując najkorzystniejsze warunki finansowania.</p>
+        <p style="font-size:0.83rem;color:#555;line-height:1.78;margin-bottom:20px;">Współpracujemy z wiodącymi bankami i towarzystwami leasingowymi, oferując najkorzystniejsze warunki finansowania.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
           <li style="font-size:0.78rem;color:#555;display:flex;align-items:center;gap:8px;"><span style="color:var(--red);font-weight:700;">→</span> Kredyt gotówkowy / samochodowy</li>
           <li style="font-size:0.78rem;color:#555;display:flex;align-items:center;gap:8px;"><span style="color:var(--red);font-weight:700;">→</span> Leasing operacyjny / finansowy</li>
@@ -627,14 +639,14 @@
 <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
 <section style="padding:100px 2rem;background:var(--off);" id="opinie">
   <div style="max-width:1360px;margin:0 auto;">
-    <div class="label reveal" style="margin-bottom:14px;">Zaufali nam</div>
-    <h2 class="reveal d1" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:48px;">Co mówią <span style="color:var(--red);">nasi klienci</span></h2>
+    <div class="label reveal">Zaufali nam</div>
+    <h2 class="sec-title reveal d1">Co mówią <span style="color:var(--red);">nasi klienci</span></h2>
 
     <div class="g3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
 
       <div class="tcard reveal">
         <div style="font-size:3rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:12px;">"</div>
-        <p style="font-size:0.92rem;line-height:1.82;color:#444;margin-bottom:24px;">"Zakup BMW M5 Competition przebiegł wzorowo. Pełna dokumentacja, uczciwa wycena mojego poprzedniego pojazdu i fachowe doradztwo. Polecam z całego serca."</p>
+        <p style="font-size:0.92rem;line-height:1.82;color:#555;margin-bottom:24px;">"Zakup BMW M5 Competition przebiegł wzorowo. Pełna dokumentacja, uczciwa wycena mojego poprzedniego pojazdu i fachowe doradztwo. Polecam z całego serca."</p>
         <div style="height:2px;background:var(--light);margin-bottom:18px;"></div>
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="width:40px;height:40px;background:var(--navy);display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0, 100% 0, 88% 100%, 0 100%);">
@@ -646,7 +658,7 @@
 
       <div class="tcard reveal d1">
         <div style="font-size:3rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:12px;">"</div>
-        <p style="font-size:0.92rem;line-height:1.82;color:#444;margin-bottom:24px;">"Niesamowita wiedza o każdym aucie. Czułam się jak w ekskluzywnym butiku. Mój Porsche Panamera jest perfekcyjny — dziękuję!"</p>
+        <p style="font-size:0.92rem;line-height:1.82;color:#555;margin-bottom:24px;">"Niesamowita wiedza o każdym aucie. Czułam się jak w ekskluzywnym butiku. Mój Porsche Panamera jest perfekcyjny — dziękuję!"</p>
         <div style="height:2px;background:var(--light);margin-bottom:18px;"></div>
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="width:40px;height:40px;background:var(--red);display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0, 100% 0, 88% 100%, 0 100%);">
@@ -658,7 +670,7 @@
 
       <div class="tcard reveal d2">
         <div style="font-size:3rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:12px;">"</div>
-        <p style="font-size:0.92rem;line-height:1.82;color:#444;margin-bottom:24px;">"Program odkupu przeszedł moje oczekiwania — szybka wycena, brak targowania, płatność następnego dnia. Zdecydowanie wrócę."</p>
+        <p style="font-size:0.92rem;line-height:1.82;color:#555;margin-bottom:24px;">"Program odkupu przeszedł moje oczekiwania — szybka wycena, brak targowania, płatność następnego dnia. Zdecydowanie wrócę."</p>
         <div style="height:2px;background:var(--light);margin-bottom:18px;"></div>
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="width:40px;height:40px;background:var(--navy);display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0, 100% 0, 88% 100%, 0 100%);">
@@ -680,8 +692,8 @@
 
       <!-- Info -->
       <div>
-        <div class="label reveal" style="margin-bottom:14px;">Kontakt</div>
-        <h2 class="reveal d1" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:40px;">Zapraszamy <span style="color:var(--red);">do salonu</span></h2>
+        <div class="label reveal">Kontakt</div>
+        <h2 class="sec-title reveal d1">Zapraszamy <span style="color:var(--red);">do salonu</span></h2>
 
         <div style="display:flex;flex-direction:column;gap:0;">
 
