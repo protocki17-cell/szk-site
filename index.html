@@ -219,33 +219,48 @@
 <!-- ═══════════════ HERO ═══════════════ -->
 <section style="position:relative;min-height:100vh;padding-top:112px;overflow:hidden;display:flex;align-items:center;">
 
-  <!-- Video background -->
-  <video autoplay muted loop playsinline id="hero-video" style="position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;z-index:0;transform:scale(0.88);transition:opacity 1.2s ease;opacity:0;">
+  <!-- Video background — oddalony, 4K crisp -->
+  <video autoplay muted loop playsinline id="hero-video"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+           transform:scale(0.72) translateY(2%);
+           transform-origin:center center;
+           transition:opacity 1.4s cubic-bezier(0.16,1,0.3,1);
+           opacity:0;
+           image-rendering:high-quality;
+           filter:brightness(1.05) contrast(1.08) saturate(1.1);">
     <source src="porsche1.mp4" type="video/mp4"/>
   </video>
-  <!-- Dark overlay -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%);z-index:1;"></div>
+
+  <!-- Biały profesjonalny blur — ramka dookoła wideo -->
+  <!-- góra -->
+  <div style="position:absolute;top:0;left:0;right:0;height:28%;background:linear-gradient(to bottom,rgba(255,255,255,1) 0%,rgba(255,255,255,0.0) 100%);z-index:1;"></div>
+  <!-- dół -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:28%;background:linear-gradient(to top,rgba(255,255,255,1) 0%,rgba(255,255,255,0.0) 100%);z-index:1;"></div>
+  <!-- lewo -->
+  <div style="position:absolute;top:0;left:0;bottom:0;width:16%;background:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255,255,255,0.0) 100%);z-index:1;"></div>
+  <!-- prawo -->
+  <div style="position:absolute;top:0;right:0;bottom:0;width:16%;background:linear-gradient(to left,rgba(255,255,255,1) 0%,rgba(255,255,255,0.0) 100%);z-index:1;"></div>
+
+  <!-- Delikatna biała mgiełka na wideo -->
+  <div style="position:absolute;inset:0;background:rgba(255,255,255,0.08);z-index:1;backdrop-filter:blur(0.4px);"></div>
 
   <div style="position:relative;z-index:2;max-width:1360px;margin:0 auto;padding:80px 2rem 64px;width:100%;">
 
     <!-- Eyebrow -->
-    <div class="label reveal" style="margin-bottom:24px;color:#fff;">
-      <span style="background:var(--red);width:24px;height:2px;display:inline-block;margin-right:10px;"></span>
-      Kraków — Węgrzce, od 2012
-    </div>
+    <div class="label reveal" style="margin-bottom:24px;">Kraków — Węgrzce, od 2012</div>
 
     <!-- Headline -->
-    <h1 class="reveal d1" style="font-size:clamp(2.8rem,6.5vw,6rem);font-weight:900;line-height:1.0;letter-spacing:-0.03em;max-width:900px;margin-bottom:24px;color:#fff;">
+    <h1 class="reveal d1" style="font-size:clamp(2.8rem,6.5vw,6rem);font-weight:900;line-height:1.0;letter-spacing:-0.03em;max-width:900px;margin-bottom:24px;color:var(--text);">
       Samochody,<br/>które definiują<br/><span style="color:var(--red);">styl życia.</span>
     </h1>
 
-    <p class="reveal d2" style="font-size:1rem;color:rgba(255,255,255,0.75);max-width:480px;line-height:1.8;margin-bottom:44px;">
+    <p class="reveal d2" style="font-size:1rem;color:#444;max-width:480px;line-height:1.8;margin-bottom:44px;">
       Starannie wyselekcjonowane pojazdy klasy premium. Mercedes-Benz, BMW, Porsche — transparentność, pasja i pełna historia każdego auta.
     </p>
 
     <div class="reveal d3" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:72px;">
       <a href="#oferta" class="btn-red">Przeglądaj ofertę <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="#kontakt" class="btn-outline-white" style="border-color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 12 356 52 77</a>
+      <a href="#kontakt" class="btn-outline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 12 356 52 77</a>
     </div>
 
     <!-- Hero bento grid -->
